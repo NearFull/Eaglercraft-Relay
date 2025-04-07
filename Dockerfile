@@ -1,3 +1,3 @@
   FROM openjdk:8-jdk-alpine
-  COPY your-app.jar /app.jar
+  COPY sp-relay.jar /sp-relay.jar
   CMD ["java", "-jar", "/sp-relay.jar"]
