@@ -3,9 +3,6 @@
 # https://hub.docker.com/_/eclipse-temurin
 FROM eclipse-temurin:21-jdk-alpine
 
-# Create and change to the app directory.
-WORKDIR /app
-
 # Copy the start.sh script into the container
 COPY start.sh /start.sh
 
