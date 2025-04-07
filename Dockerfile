@@ -10,7 +10,7 @@ WORKDIR /app
 COPY start.sh /start.sh
 
 # Build the app.
-RUN ./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install
+RUN RUN chmod +x /start.sh
 
 # Run the app by dynamically finding the JAR file in the target directory
 CMD ["sh", "-c", "java -jar target/*.jar"]
