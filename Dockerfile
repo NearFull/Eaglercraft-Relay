@@ -6,11 +6,12 @@ FROM eclipse-temurin:21-jdk-alpine
 # Create and change to the app directory.
 WORKDIR /app
 
-# Copy local code to the container image.
+# Copy the start.sh script into the container
 COPY start.sh /start.sh
 
-# Build the app.
-RUN RUN chmod +x /start.sh
+# Make start.sh executable
+RUN chmod +x /start.sh
 
-# Run the app by dynamically finding the JAR file in the target directory
-CMD ["sh", "-c", "java -jar target/*.jar"]
+# Run the start.sh script
+CMD ["/start.sh"]
+
